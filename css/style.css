@@ -87,3 +87,118 @@ body.courgette-regular {
     }
   }
   
+
+  .logo-holder {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var[-body-color];
+    font-weight: bold;
+  }
+
+  #logo {
+    height: 3em;
+    width: auto;
+    float: left;
+    margin-right: .5em;
+  }
+
+  .sub-head {
+    align-items: center;
+    display: flex;
+  }
+
+  .block-div {
+    display: block;
+    border-radius: 1em;
+    color: blue;
+    background-color: beige;
+    border: 1px;
+  }
+
+  .hide-me {
+    display: none;
+  }
+
+  .post span {
+    color: aqua;
+  }
+
+  .inline-block {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: .2em .8em;
+    color: var(--dark-color);
+  background-color: bisque;
+  transform: rotate(-8deg);
+  font-weight: 800;
+  font-variation-settings: "width" 75;
+  }
+
+  .static {
+    position: static;
+    border: 1px solid var(--dark-color);
+  }
+
+  .fixed {
+    z-index: 999;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    width: 20px;
+    padding: 1em;
+    background-color: coral;
+    border: 1px solid var(--dark-color);
+  }
+
+  .relative{
+    position: relative;
+    left: 1em;
+    width: calc(100% - 1em);
+    border: 1px solid var(--dark-color);
+  }
+
+  .sticket-demo-holder{
+  overflow: scroll
+  position: relative;
+  border: 1px solid var(-dark-color);
+  width: 100%;
+  margin-bottom: 1em;
+  aspect-ration: 4/3;
+}
+
+.absolute-bubble {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  background: coral;
+  border-radius: 50px;
+  transform: translate(-50%, -50%);
+}
+
+.grid-parent{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.grid-child{
+  min-height: 1em;
+  background-color: blue;
+}
+
+.grid-layout-parent{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 5fr;
+  gap: 1em;
+
+}
+
+
+  .block {
+    margin: 1em;
+  }
