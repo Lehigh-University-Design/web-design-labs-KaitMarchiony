@@ -1,170 +1,214 @@
-body.courgette-regular {
-    font-family: "Courgette", cursive;
-    font-weight: 400;
-    font-style: normal;
-    padding: 5px;
-  }
-
-#head{
-    background-color: green;
-}
-
-.post{
-    background-color: pink;
-}
-
 :root {
-    --background-color: rgb(237, 246, 248);
-    --light-color: #ffffff;
-    --dark-color: #000000;
-    --link-color: rgb(196, 16, 205);
-  }
+  --background-color: rgb(237, 246, 248);
+  --light-color: #ffffff;
+  --dark-color: #000000;
+  --link-color: rgb(196, 16, 205);
+}
 
-  body {
-    font-optical-sizing: auto;
-    font-family: "IBM Plex Mono", monospace;
-    font-style: normal;
-    background-color: var(--background-color);
-    margin: 0 1em;
-    font-size: 16px;
-  }
+body {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--background-color);
+  margin: 1em;
+  font-size: 16px;
+}
 
-  main {
-    position: relative;
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+/* universal selector */
+/*
+* {
+  text-align: center;
+}
+*/
 
-  #head {
-    display: flex;
-    justify-content: space-between;
-  }
+main {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+}
 
-  .sub-head {
-    margin-left: auto;
-    order: 2;
-  }
+#head {
+  display: flex;
+  justify-content: space-between;
+}
 
-  #head h3 a {
-    color: var(--dark-color);
-    text-decoration: none;
-  }
+#head h3 a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
 
-  h1 {
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 100;
-    font-size: 3em;
-  }
+.sub-head {
+  margin-left: auto;
+  order: 2;
+}
 
-  p {
-    font-family: "Open Sans", sans-serif;
-  }
+img {
+  width: 100%;
+  height: auto;
+}
 
-  .post {
-    border:1px solid var(--dark-color);
-    margin-bottom: 1em;
-    padding: .5em 1em;
-  }
- 
-  /*these styles are shown between .post and #post */
-  .post, #post {
-    .img container {
-        aspect-ratio: 3/2 ;
-    }
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    a{
-        color: var(--link-color);
-        background-color: var(--light-color);
-        text-decoration: none;
-    }
-    a.hover {
-        text-decoration: underline;
-    }
-  }
-  
+/* Lab 1 Styles */
 
-  .logo-holder {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var[-body-color];
-    font-weight: bold;
-  }
+/* grouping selector (uses the style below on any h1 element on the page) */
+h1 {
+  font-size: 2.5em;
+  font-weight: 300;
+}
 
-  #logo {
-    height: 3em;
-    width: auto;
-    float: left;
-    margin-right: .5em;
-  }
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+}
 
-  .sub-head {
-    align-items: center;
-    display: flex;
-  }
+.special-headline {
+  font-weight: 900;
+  color: indigo;
+}
 
-  .block-div {
+#unique-headline {
+  font-weight: 600;
+  color: deeppink;
+}
+
+/* element selectors */
+h2, h3, h4 {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+/* our post class */
+.post {
+  border:1px solid var(--dark-color);
+  margin-bottom: 1em;
+  padding: .5em 1em;
+}
+
+/* #post is styled almost the same as .post except for the background color */
+#post {
+  border:1px solid var(--dark-color);
+  background-color: #ffffff;
+  margin-bottom: 1em;
+  padding: .5em 1em;
+}
+
+/* these styles are shared between .post and #post */
+.post, #post {
+  .img-container {
+    aspect-ratio: 3/2;
+  }
+  img {
+    width: 100%;
+    height: auto;
     display: block;
-    border-radius: 1em;
-    color: blue;
-    background-color: beige;
-    border: 1px;
   }
-
-  .hide-me {
-    display: none;
+  a {
+    color: var(--link-color);
+    background-color: var(--light-color);
+    text-decoration: none;
   }
-
-  .post span {
-    color: aqua;
+  a:hover {
+    text-decoration: underline;
   }
+}
 
-  .inline-block {
-    display: inline-block;
-    text-transform: uppercase;
-    padding: .2em .8em;
-    color: var(--dark-color);
-  background-color: bisque;
+.highlight {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  h2 {
+    color: var(--light-color);
+  }
+}
+
+/* Lab 2 Styles */
+
+.logo-holder {
+  display: flex;
+  align-items:center;
+  text-decoration: none;
+  color: var(--body-color);
+  font-weight: bold;
+}
+
+#logo {
+  height: 3em;
+  width: auto;
+  float: left;
+  margin-right: 1em;
+}
+
+.sub-head {
+  display: flex;
+  align-items: center;
+}
+
+
+/* Lab 3 Styles */
+
+.hide-me {
+  display: none;
+}
+
+.post span {
+  color: coral;
+}
+
+.block-div, .block {
+  display: block;
+  border-radius: 1em;
+  color: coral;
+  background-color: #006060;
+  border: 1px solid var(--dark-color);
+  padding: 1em;
+}
+
+.block {
+  margin: 1em 0;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0.2em 0.8em;
+  color: var(--dark-color) !important;
+  background-color: coral;
   transform: rotate(-8deg);
   font-weight: 800;
-  font-variation-settings: "width" 75;
-  }
+  font-variation-settings: "width" 65;
+}
 
-  .static {
-    position: static;
-    border: 1px solid var(--dark-color);
-  }
+.static {
+  position: static;
+  border: 1px solid var(--dark-color);
+}
 
-  .fixed {
-    z-index: 999;
-    position: fixed;
-    bottom: 1em;
-    right: 1em;
-    width: 20px;
-    padding: 1em;
-    background-color: coral;
-    border: 1px solid var(--dark-color);
-  }
+.fixed {
+  z-index: 999;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  width: 200px;
+  padding: 1em;
+  background-color: coral;
+  border: 1px solid var(--dark-color);
+}
 
-  .relative{
-    position: relative;
-    left: 1em;
-    width: calc(100% - 1em);
-    border: 1px solid var(--dark-color);
-  }
-
-  .sticket-demo-holder{
-  overflow: scroll
+.relative {
   position: relative;
-  border: 1px solid var(-dark-color);
+  left: 1em;
+  width: calc(100% - 1em);
+  border: 1px solid var(--dark-color);
+}
+
+.absolute-demo-holder {
+  position: relative;
+  border: 1px solid var(--dark-color);
   width: 100%;
   margin-bottom: 1em;
-  aspect-ration: 4/3;
+  aspect-ratio: 4/3;
 }
 
 .absolute-bubble {
@@ -175,30 +219,262 @@ body.courgette-regular {
   height: 100px;
   background: coral;
   border-radius: 50px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* This is a shorthand of translateX(-50%) and translateY(-50%) */
 }
 
-.grid-parent{
+.sticky-demo-holder {
+  overflow: scroll;
+  position: relative;
+  border: 1px solid var(--dark-color);
+  width: 100%;
+  margin-bottom: 1em;
+  height: 200px;
+  p {
+    margin: 1em;
+  }
+}
+
+.sticky-bit {
+  background-color: coral;
+  position: sticky;
+  top: 0;
+  padding: 1em;
+}
+
+.float-demo-holder {
+  border: 1px solid var(--dark-color);
+  padding: 0 1em;
+  margin-bottom: 1em;
+
+  .img-right {
+    width: 15em;
+    height: auto;
+    float: right;
+    margin: 1em 0 1em 1em;
+  }
+  
+  .img-left {
+    width: 15em;
+    height: auto;
+    float: left;
+    margin: 1em 1em 1em 0;
+  }
+
+}
+
+.column-demo-holder {
+  border: 1px solid var(--dark-color);
+  padding: 1em;
+  margin-bottom: 1em;
+  overflow: hidden;
+
+  .column {
+    width: calc(100%/3 - 2rem);
+    aspect-ratio: 1;
+    float: left;
+    padding: 1rem;
+    font-size: 2em;
+    font-weight: 100;
+    font-style: italic;
+    background-color: hsl(16, 100%, 66%);
+    &:nth-child(even){
+      background-color: hsl(16, 100%, 44%);
+    }
+  }
+
+  .masthead {
+    background-color: #600060;
+    margin: 1em;
+    height: 100px;
+  }
+
+  .side-nav {
+    background-color: #006060;
+    float: left;
+    margin: 1em;
+    height: 60vh;
+    width: calc(25% - 2em);
+  }
+
+  .article {
+    background-color: #606000;
+    float: left;
+    margin: 1em;
+    height: 60vh;
+    width: calc(75% - 2em);
+    
+  }
+
+}
+
+/* CSS Lab 4: Grid */
+
+.artistcontainer {
   display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  gap: 2em;
+  margin-bottom: 2em;
+}
+
+.artistinfo {
+
+}
+
+.artistinfo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grid-parent {
+  display: grid;
+  /*grid-template-columns: 25% 75%;*/
   grid-template-columns: 1fr 3fr;
   gap: 1em;
   margin-bottom: 1em;
 }
 
-.grid-child{
-  min-height: 1em;
-  background-color: blue;
+.grid-child {
+  min-height: 30vh;
+  background-color: #d6d6d6;
 }
 
-.grid-layout-parent{
+.grid-layout-parent {
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 5fr;
   gap: 1em;
-
+  margin-bottom: 1em;
 }
 
+.grid-layout-chess {
+  display: grid;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+  grid-template-columns: repeat(8, 1fr);
+  margin-bottom: 1em;
+}
 
-  .block {
-    margin: 1em;
+.grid-child-chess {
+  aspect-ratio: 1;
+  background-color: coral;
+  transition: 0.5s;
+}
+
+.grid-child-chess:nth-child(-n + 8):nth-child(even),
+.grid-child-chess:nth-child(n + 8):nth-child(-n + 16):nth-child(odd),
+.grid-child-chess:nth-child(n + 17):nth-child(-n + 24):nth-child(even),
+.grid-child-chess:nth-child(n + 25):nth-child(-n + 32):nth-child(odd),
+.grid-child-chess:nth-child(n + 33):nth-child(-n + 40):nth-child(even),
+.grid-child-chess:nth-child(n + 41):nth-child(-n + 48):nth-child(odd),
+.grid-child-chess:nth-child(n + 49):nth-child(-n + 56):nth-child(even),
+.grid-child-chess:nth-child(n + 57):nth-child(-n + 64):nth-child(odd) {
+    background-color: hsl(16, 100%, 44%)
+}
+
+.grid-child-chess:hover {
+  background-color: black !important;
+}
+
+.grid-assign-parent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.grid-assign-child {
+  min-height: 1em;
+  background-color: #d6d6d6;
+}
+
+.grid-assign-special-child {
+  grid-row: 2 / 4; /*start at row 2 and go to row 4 */
+  grid-column: 2 / 4; /*start at column 2 and go to column 4 */
+  background-color: coral;
+}
+
+.grid-area-parent {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  gap: 1em;
+  margin-bottom: 1em;
+  grid-template-areas:
+    'sidebar header'
+    'sidebar main';
+    /* notice how it looks like the grid, visually */
+}
+
+.grid-area-child {
+  min-height: 1em;
+  background-color: #d6d6d6;
+}
+.area-header {
+  grid-area: header;
+}
+
+.area-sidebar {
+  grid-area: sidebar;
+}
+
+.area-main {
+  grid-area: main;
+}
+
+.grid-alignment-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center; /* start, center, end, space-between, space-around, space-evenly  */
+  justify-items: center; /* stretch, start, center, end */
+  align-content: center; /* start, center, end, space-between, space-around, space-evenly  */
+  align-items: center; /* stretch, start, center, end */
+  gap: 1em;
+  margin-bottom: 1em;
+  background-color: #006060;
+  min-height: 15em;
+}
+
+.grid-alignment-child {
+  width: 100px;
+  min-height: 1em;
+  background-color: #d6d6d6;
+}
+
+.quick-center-trick {
+  height: 60vh;
+  background-color: #600060;
+  display: grid;
+  place-content: center; /*start, center, end (shorthand for justify-content with align-content)*/
+}
+
+/*Flex Lab*/
+
+.flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-card {
+  width: calc(100%/3);
+}
+
+.flex-card-inner {
+  margin: 1em;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  background-color: beige;
+  flex-direction: column;
+  text-align: center;
+  h4{
+    background-color: black;
+    display: inline-block;
+    color: #fff;
+    padding: .25em;
   }
+  img {
+    border-radius: 50%;
+  }
+}
